@@ -30,7 +30,78 @@
 
 This project is a Spring Boot sample app. It will expose a REST endpoint that when called, will make two external calls to the Github API to return user and user repository information, in the form of JSON.
 
-I am not providing further details because it is a homework assignment and it should remain confidential.
+#### Instructions
+
+The purpose of this exercise is to further get to know each other. Provide you with a chance to experience the type of work you will be doing as well as gauge your coding style. We do not expect this assessment to take any longer than 1-2 hours; if it takes much longer please stop and send what you have completed.
+
+A recently signed customer wants to integrate some data from Github into their client application. We have discussed their needs and
+essentially what they want is an endpoint they can call with a username that will return the data in JSON format as specified below (that also
+serves as an example):
+
+```
+{
+  user_name: "octocat",
+  display_name: "The Octocat",
+  avatar: "https://avatars3.githubusercontent.com/u/583231?v=4 ",
+  geo_location: "San Francisco",
+  email: null,
+  url: "https://github.com/octocat ",
+  created_at: "2011-01-25 18:44:36",
+  repos: [
+    {
+      name: "boysenberry-repo-1",
+      url: "https://github.com/octocat/boysenberry-repo-1 "
+    },
+    ...
+  ]
+}
+```
+
+```
+DATA FROM
+https://api.github.com/users/octocat
+https://api.github.com/users/octocat/repos
+```
+
+The example response above is returned when calling the api sending the username “octocat”. Data to form the response comes from the
+two APIs noted. Be sure to take note of the difference(s) in parameter names as well as formatting for the created_at value when
+compared to what is returned from the API.
+
+No token or signup is necessary to use these Github APIs (https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api), however,
+you can be rate limited. Perhaps implementing a caching mechanism might help? Or of course you could get an access token that can
+maybe be set at runtime (we do not expect this).
+
+In summary
+
+- Stand up a server.
+- Have an endpoint that takes a username.
+- Fetch or retrieve the data matching to that username using the API noted above.
+- Return the JSON object defined above with the data you pulled.
+  - What if no user exists?
+- Should also include some unit tests.
+
+Make sure final code is in a public repo (github, bitbucket, gitlab). Provide a readMe explaining your decisions, architecture, and how to
+install/run and utilize your service. We look forward to seeing your code!
+
+#### FAQ
+
+##### What language/tools do I use? Can I use a framework or library?
+
+You can choose any language/tools and use any framework or library. We are interested in knowing what you feel will be the best choice in
+implementing the above. Whatever choices you make explain those in the readMe and be prepared to discuss further. Some suggestions for
+languages (and frameworks): Java (Spring Boot), Node (Express), Go (Gin).
+
+##### What am I being evaluated on exactly?
+
+We want to see production-ready code. Primary criteria is as follows:
+
+- Organization Is the code well organized where it can be easily extended? Not one big function or lack of modularity.
+- Readability Can the code be easily read and followed for a new developer or when you come back to it months later?
+- Language/Libraries/Framework Are these good choices? Is the reasoning sound?
+- Documentation Can we run and use the code based on the readMe? Is the code itself well documented in some way?
+- Depth of Knowledge Are the right data structures being used? Are the strengths of the language chosen being utilized? Does the
+  API follow industry standards?
+- Stability/Security Can the code handle bad input? Is the code programmed defensively?
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
