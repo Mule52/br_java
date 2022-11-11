@@ -145,7 +145,7 @@ mvn clean package
 
 ## Running the application locally
 
-There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.branch.branchhomework.BranchHomeworkApplication` class from your IDE.
+There are several ways to run a Spring Boot application on your local machine. One way is to execute the `main` method in the `com.company.homework.HomeworkApplication` class from your IDE.
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
@@ -156,7 +156,7 @@ mvn spring-boot:run
 Alternatively, you can use java -jar to run the project from a terminal.
 
 ```shell
-java -jar target/branch-homework-0.0.1-SNAPSHOT.jar
+java -jar target/company-homework-0.0.1-SNAPSHOT.jar
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
